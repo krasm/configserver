@@ -1,5 +1,11 @@
-rabbitmq:
-  image: rabbitmq:3-management
-  ports:
-    - "5672:5672"
-    - "15672:15672"
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  config_server:
+    image: msk/config-server:latest
+    ports:
+      - "8888:8888"

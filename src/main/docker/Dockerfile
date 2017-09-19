@@ -1,4 +1,4 @@
-FROM java:7
+FROM java:8
 ADD configserver-0.0.1-SNAPSHOT.jar app.jar
 VOLUME /tmp
 VOLUME /target
