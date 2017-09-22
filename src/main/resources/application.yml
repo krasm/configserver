@@ -10,11 +10,10 @@ logging:
     org.springframework.cloud: 'DEBUG'
     
 eureka:
-  instance:
-    leaseRenewalIntervalInSeconds: 10
-    statusPageUrlPath: /admin/info
-    healthCheckUrlPath: /admin/health
-
+  client: 
+    registerWithEureka: false
+    fetch-registry: false
+      
 spring:
   cloud:
     config:
